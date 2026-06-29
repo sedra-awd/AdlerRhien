@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdlerRhein Logistik</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="site-header">
+    <div class="header-logo">
+        <h1><span class="logo-bold">AdlerRhein</span> <span class="logo-light">Logistik</span></h1>
+        <div class="header-divider">
+            <span class="divider-dot"></span>
+            <span class="divider-line"></span>
+            <span class="divider-dot"></span>
+        </div>
+        <p class="header-tagline">Wir bewegen, was Ihnen wichtig ist – sicher, schnell und professionell</p>
+        <p class="header-sub">
+            <span>Umzug</span>
+            <span class="sub-sep">·</span>
+            <span>Transport</span>
+            <span class="sub-sep">·</span>
+            <span>Lagerung</span>
+            <span class="sub-sep">·</span>
+            <span>Einfach zuverlässig</span>
+        </p>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav id="main-nav">
+        <a href="#home" class="nav-link active">HOME</a>
+
+        <!-- UMZÜGE dropdown -->
+        <div class="dropdown">
+            <a href="#services" class="nav-link dropdown-toggle">
+                UMZÜGE <i class="fa-solid fa-chevron-down fa-xs"></i>
+            </a>
+            <div class="dropdown-menu">
+                <a href="#privatumzug"><i class="fa-solid fa-house"></i> Privatumzug</a>
+                <a href="#firmenumzug"><i class="fa-solid fa-building"></i> Firmenumzug</a>
+                <a href="#neumoebel"><i class="fa-solid fa-couch"></i> Neumöbellogistik</a>
+                <a href="#contact"><i class="fa-solid fa-file-signature"></i> Umzugsanfrage</a>
+            </div>
+        </div>
+
+        <a href="#about" class="nav-link">ÜBER UNS</a>
+        <a href="#contact" class="btn-contact">KONTAKT</a>
+    </nav>
+</header>
+
+<!-- ===== MAIN ===== -->
+<main>
+
+    <!-- ══════════ HOME ══════════ -->
+    <section id="home">
+
+        <!-- hero -->
+        <div id="hero">
+            <div id="hero-image-wrap">
+                <img src="ChatGPT Image Jun 24, 2026, 08_25_13 PM.png" alt="Adler Rhein Team">
+            </div>
+            <div id="hero-text">
+                <p class="welcome-label">Willkommen bei</p>
+                <h2>AdlerRhein<br>Logistik</h2>
+                <div class="red-line"></div>
+                <!-- ↓ CHANGE PHONE -->
+                <a href="tel:+1234567890"><i class="fa-solid fa-phone"></i> TEL. 123-456-7890</a>
+                <a href="#privatumzug"><i class="fa-solid fa-house"></i> PRIVATUMZUG</a>
+                <a href="#firmenumzug"><i class="fa-solid fa-building"></i> FIRMENUMZUG</a>
+                <a href="#neumoebel"><i class="fa-solid fa-couch"></i> NEUMÖBELLOGISTIK</a>
+                <a href="#contact"><i class="fa-solid fa-file-signature"></i> UMZUGSANFRAGE</a>
+                <a href="#contact" class="btn-quote">
+                    <i class="fa-solid fa-file-invoice"></i> Jetzt Anfrage stellen
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- join team banner -->
+        <div id="join-team">
+            <i class="fa-solid fa-users join-icon"></i>
+            <div class="join-divider"></div>
+            <div class="join-content">
+                <h3>KOMM' INS TEAM!</h3>
+                <a href="#contact">Berufskraftfahrer / Umzugsmitarbeiter (m/w/d)</a>
+                <p>Werde Teil unseres starken Teams.</p>
+            </div>
+            <a href="#contact" class="btn-apply">JETZT BEWERBEN</a>
+        </div>
+
+    </section>
+
+    <!-- ══════════ GALERIE ══════════ -->
+    <section id="galerie">
+        <div class="section-title">
+            <h2>GALERIE</h2>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="carousel-wrap">
+            <!-- prev slide -->
+            <div class="car-slide car-prev" onclick="galPrev()">
+                <img id="car-img-prev" src="" alt="">
+                <div class="car-dim"></div>
+            </div>
+            <!-- active / center slide -->
+            <div class="car-slide car-active">
+                <img id="car-img-active" src="" alt="">
+            </div>
+            <!-- next slide -->
+            <div class="car-slide car-next" onclick="galNext()">
+                <img id="car-img-next" src="" alt="">
+                <div class="car-dim"></div>
+            </div>
+        </div>
+
+        <!-- arrow buttons -->
+        <div class="car-arrows">
+            <button class="car-btn" onclick="galPrev()"><i class="fa-solid fa-chevron-left"></i></button>
+            <span class="car-counter" id="car-counter">1 / 8</span>
+            <button class="car-btn" onclick="galNext()"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- ══════════ SERVICES ══════════ -->
+    <section id="services">
+        <div class="section-title">
+            <h2>UNSERE LEISTUNGEN</h2>
+            <div class="title-line"></div>
+        </div>
+
+        <!-- 1. Privatumzug -->
+        <div id="privatumzug" class="service-block">
+            <div class="img-wrap">
+                <img src="imgi_189_ein_gut_beleuchtetes_wohnzimmer_mit_unverpackten_kartonkisten.jpg" alt="Privatumzug">
+            </div>
+            <div class="service-info">
+                <i class="fa-solid fa-house service-icon"></i>
+                <h3>Privatumzug</h3>
+                <p>Wir unterstützen Sie bei Ihrem privaten Umzug – egal ob Wohnung, Haus oder einzelnes Zimmer. Unser Team kümmert sich um den sicheren Transport Ihrer Möbel und persönlichen Gegenstände, damit Ihr Umzug stressfrei und reibungslos abläuft. Von der Planung bis zur Durchführung sind wir an Ihrer Seite.</p>
+                <a href="#contact" class="btn-service">Jetzt anfragen</a>
+            </div>
+        </div>
+
+        <!-- 2. Firmenumzug -->
+        <div id="firmenumzug" class="service-block reverse">
+            <div class="img-wrap">
+                <img src="Ultra_realistic_professional_moving_service_202606242046.jpg" alt="Firmenumzug">
+            </div>
+            <div class="service-info">
+                <i class="fa-solid fa-building service-icon"></i>
+                <h3>Firmenumzug</h3>
+                <p>Ein Firmenumzug erfordert Planung und Präzision. Wir sorgen dafür, dass Ihr Unternehmen schnell und effizient umzieht, ohne lange Ausfallzeiten. Büroeinrichtung, Technik und Dokumente werden sicher transportiert und am neuen Standort professionell aufgebaut.</p>
+                <a href="#contact" class="btn-service">Jetzt anfragen</a>
+            </div>
+        </div>
+
+        <!-- 3. Neumöbellogistik -->
+        <div id="neumoebel" class="service-block">
+            <div class="img-wrap">
+                <img src="Ultra_realistic_premium_furniture_packing_202606242051.jpg" alt="Neumöbellogistik">
+            </div>
+            <div class="service-info">
+                <i class="fa-solid fa-couch service-icon"></i>
+                <h3>Neumöbellogistik</h3>
+                <p>Wir übernehmen die komplette Logistik für neue Möbel – vom Transport bis zur Lieferung und Montage. Ideal für Händler, Hersteller oder Kunden, die eine zuverlässige und sorgfältige Abwicklung ihrer Neumöbel wünschen.</p>
+                <a href="#contact" class="btn-service">Jetzt anfragen</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ══════════ ÜBER UNS ══════════ -->
+    <section id="about">
+        <div class="section-title">
+            <h2>ÜBER UNS</h2>
+            <div class="title-line"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <!-- ↓ CHANGE ABOUT TEXT -->
+                <h3>Ihr zuverlässiger Umzugspartner</h3>
+                <p>Mit über 20 Jahren Erfahrung haben wir tausenden Familien und Unternehmen geholfen, sicher und effizient umzuziehen.</p>
+                <p>Unser professionelles Team ist geschult, versichert und darauf bedacht, Ihren Umzug so reibungslos wie möglich zu gestalten.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-num">20+</span>
+                        <span class="stat-label">Jahre Erfahrung</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">5000+</span>
+                        <span class="stat-label">Zufriedene Kunden</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">50+</span>
+                        <span class="stat-label">Mitarbeiter</span>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-about">Jetzt Kontakt aufnehmen</a>
+            </div>
+            <div class="about-image">
+                <img src="Ultra_realistic_happy_customer_shaking_202606242105.jpg" alt="Unser Team">
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════ KONTAKT / UMZUGSANFRAGE ══════════ -->
+    <section id="contact">
+        <div class="section-title light">
+            <h2>UMZUGSANFRAGE</h2>
+            <div class="title-line"></div>
+            <p class="contact-subtitle">Planen Sie Ihren Umzug? Über unsere Umzugsanfrage können Sie uns schnell alle wichtigen Informationen senden. Wir erstellen Ihnen ein individuelles, unverbindliches Angebot, das genau auf Ihre Bedürfnisse abgestimmt ist.</p>
+        </div>
+
+        <div class="contact-wrap">
+            <form class="contact-form" onsubmit="submitForm(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Name / Firma *</label>
+                        <input type="text" placeholder="Ihr Name oder Firma">
+                    </div>
+                    <div class="form-group">
+                        <label>Vorname *</label>
+                        <input type="text" placeholder="Vorname">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>E-Mail-Adresse *</label>
+                        <input type="email" placeholder="ihre@email.de">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon *</label>
+                        <input type="tel" placeholder="+49 123 456 7890">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Straße / Nr.</label>
+                        <input type="text" placeholder="Straße und Hausnummer">
+                    </div>
+                    <div class="form-group">
+                        <label>PLZ / Ort</label>
+                        <input type="text" placeholder="PLZ und Ort">
+                    </div>
+                </div>
+                <div class="form-row checkbox-row">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Privatumzug
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Firmenumzug
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Neumöbellogistik
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Sonstiges
+                    </label>
+                </div>
+                <div class="form-group full">
+                    <label>Nachricht</label>
+                    <textarea rows="5" placeholder="Was können wir für Sie tun?"></textarea>
+                </div>
+                <div class="form-actions">
+                    <p class="form-note">* Pflichtfelder</p>
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-paper-plane"></i> ANFRAGE SENDEN
+                    </button>
+                </div>
+            </form>
+
+            <!-- sidebar -->
+            <div class="contact-info">
+                <h3>Kontakt</h3>
+                <!-- ↓ CHANGE CONTACT DETAILS -->
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>TEL. 123-456-7890</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-fax"></i>
+                    <span>FAX. 123-456-7891</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@adlerrhein.de</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Musterstraße 1<br>12345 Musterstadt</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Mo–Fr: 8:00 – 18:00 Uhr<br>Sa: 9:00 – 14:00 Uhr</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="footer-inner">
+        <div id="footer-left">
+            <!-- ↓ CHANGE COMPANY INFO -->
+            <p><strong>AdlerRhein Logistik GmbH</strong></p>
+            <p>Musterstraße 1</p>
+            <p>12345 Musterstadt</p>
+            <br>
+            <p>Tel.: 123-456-7890</p>
+            <p>Fax: 123-456-7891</p>
+            <a href="mailto:info@adlerrhein.de">info@adlerrhein.de</a>
+        </div>
+        <div id="footer-links">
+            <h4>Schnelllinks</h4>
+            <a href="#home">Home</a>
+            <a href="#privatumzug">Privatumzug</a>
+            <a href="#firmenumzug">Firmenumzug</a>
+            <a href="#neumoebel">Neumöbellogistik</a>
+            <a href="#about">Über uns</a>
+            <a href="#contact">Kontakt</a>
+        </div>
+        <div id="footer-legal">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+        </div>
+    </div>
+    <div id="footer-bottom">
+        <p>© 2025 AdlerRhein Logistik GmbH — Alle Rechte vorbehalten</p>
+    </div>
+</footer>
+
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+    /* smooth scroll */
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (!target) return;
+            e.preventDefault();
+            const offset = document.getElementById('site-header').offsetHeight + 10;
+            window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+            document.getElementById('main-nav').classList.remove('open');
+            document.getElementById('hamburger').classList.remove('open');
+        });
+    });
+
+    /* hamburger */
+    document.getElementById('hamburger').addEventListener('click', () => {
+        document.getElementById('main-nav').classList.toggle('open');
+        document.getElementById('hamburger').classList.toggle('open');
+    });
+
+    /* active nav on scroll */
+    const navSections = ['home','services','about','contact'];
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY + document.getElementById('site-header').offsetHeight + 20;
+        let current = 'home';
+        navSections.forEach(id => {
+            const el = document.getElementById(id);
+            if (el && scrollY >= el.offsetTop) current = id;
+        });
+        document.querySelectorAll('nav .nav-link').forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+        });
+    });
+
+    /* ── CAROUSEL ── */
+    const galImages = [
+        'ChatGPT Image Jun 24, 2026, 08_25_13 PM.png',
+        'Ultra_realistic_professional_moving_service_202606242046.jpg',
+        '01 (3).jpeg',
+        '01 (4).jpg',
+        'imgi_22_zwei_bewegliche_dienstleute_in_einem_raum_die_eine_schwere.jpg',
+        'Ultra_realistic_premium_furniture_packing_202606242051.jpg',
+        'Ultra_realistic_premium_furniture_packing_202606242052.jpg',
+        'Ultra_realistic_happy_customer_shaking_202606242105.jpg',
+    ];
+    let galIdx = 0;
+
+    function updateCarousel(dir) {
+        const total  = galImages.length;
+        const prev   = (galIdx - 1 + total) % total;
+        const next   = (galIdx + 1) % total;
+
+        const imgPrev   = document.getElementById('car-img-prev');
+        const imgActive = document.getElementById('car-img-active');
+        const imgNext   = document.getElementById('car-img-next');
+
+        /* slide-out animation */
+        const wrap = document.querySelector('.carousel-wrap');
+        wrap.classList.add(dir > 0 ? 'slide-left' : 'slide-right');
+
+        setTimeout(() => {
+            imgPrev.src   = galImages[prev];
+            imgActive.src = galImages[galIdx];
+            imgNext.src   = galImages[next];
+            document.getElementById('car-counter').textContent =
+                `${galIdx + 1} / ${total}`;
+            wrap.classList.remove('slide-left', 'slide-right');
+        }, 260);
+    }
+
+    function galNext() {
+        galIdx = (galIdx + 1) % galImages.length;
+        updateCarousel(1);
+    }
+    function galPrev() {
+        galIdx = (galIdx - 1 + galImages.length) % galImages.length;
+        updateCarousel(-1);
+    }
+
+    /* init carousel on load */
+    document.addEventListener('DOMContentLoaded', () => updateCarousel(0));
+
+    /* keyboard */
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft')  galPrev();
+        if (e.key === 'ArrowRight') galNext();
+    });
+
+    /* form submit */
+    function submitForm(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('.btn-submit');
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> GESENDET!';
+        btn.style.background = '#1a7e3c';
+        setTimeout(() => {
+            btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> ANFRAGE SENDEN';
+            btn.style.background = '';
+            e.target.reset();
+        }, 3000);
+    }
+</script>
+
+</body>
+</html>
