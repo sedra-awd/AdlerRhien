@@ -12,22 +12,11 @@
 <!-- ===== HEADER ===== -->
 <header id="site-header">
     <div class="header-logo">
-        <h1><span class="logo-bold">AdlerRhein</span> <span class="logo-light">Logistik</span></h1>
-        <div class="header-divider">
-            <span class="divider-dot"></span>
-            <span class="divider-line"></span>
-            <span class="divider-dot"></span>
+        <a href="#home"><img src="logo no bg.png" alt="A&R+ Logistik & Transporte" class="header-logo-img"></a>
+        <div class="header-text">
+            <p class="header-tagline">Wir bewegen, was Ihnen wichtig ist – sicher, schnell und professionell</p>
+            <p class="header-sub">Umzug · Transport · Lagerung · Einfach zuverlässig</p>
         </div>
-        <p class="header-tagline">Wir bewegen, was Ihnen wichtig ist – sicher, schnell und professionell</p>
-        <p class="header-sub">
-            <span>Umzug</span>
-            <span class="sub-sep">·</span>
-            <span>Transport</span>
-            <span class="sub-sep">·</span>
-            <span>Lagerung</span>
-            <span class="sub-sep">·</span>
-            <span>Einfach zuverlässig</span>
-        </p>
     </div>
 
     <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
@@ -64,7 +53,7 @@
         <!-- hero -->
         <div id="hero">
             <div id="hero-image-wrap">
-                <img src="ChatGPT Image Jun 24, 2026, 08_25_13 PM.png" alt="Adler Rhein Team">
+                <img src="Ultra_realistic_professional_moving_service_202606242046 (2).jpg" alt="Adler Rhein Team">
             </div>
             <div id="hero-text">
                 <p class="welcome-label">Willkommen bei</p>
@@ -139,7 +128,7 @@
         <!-- 1. Privatumzug -->
         <div id="privatumzug" class="service-block">
             <div class="img-wrap">
-                <img src="imgi_189_ein_gut_beleuchtetes_wohnzimmer_mit_unverpackten_kartonkisten.jpg" alt="Privatumzug">
+                <img src="ChatGPT Image Jun 24, 2026, 08_25_13 PM (2).png" alt="Privatumzug">
             </div>
             <div class="service-info">
                 <i class="fa-solid fa-house service-icon"></i>
@@ -152,7 +141,7 @@
         <!-- 2. Firmenumzug -->
         <div id="firmenumzug" class="service-block reverse">
             <div class="img-wrap">
-                <img src="Ultra_realistic_professional_moving_service_202606242046.jpg" alt="Firmenumzug">
+                <img src="Ultra_realistic_professional_moving_service_202606242046 (2).jpg" alt="Firmenumzug">
             </div>
             <div class="service-info">
                 <i class="fa-solid fa-building service-icon"></i>
@@ -165,7 +154,7 @@
         <!-- 3. Neumöbellogistik -->
         <div id="neumoebel" class="service-block">
             <div class="img-wrap">
-                <img src="Ultra_realistic_premium_furniture_packing_202606242051.jpg" alt="Neumöbellogistik">
+                <img src="Ultra_realistic_premium_furniture_packing_202606242051 (2).jpg" alt="Neumöbellogistik">
             </div>
             <div class="service-info">
                 <i class="fa-solid fa-couch service-icon"></i>
@@ -206,7 +195,7 @@
                 <a href="#contact" class="btn-about">Jetzt Kontakt aufnehmen</a>
             </div>
             <div class="about-image">
-                <img src="Ultra_realistic_happy_customer_shaking_202606242105.jpg" alt="Unser Team">
+                <img src="Ultra_realistic_happy_customer_shaking_202606242105 (2).jpg" alt="Unser Team">
             </div>
         </div>
     </section>
@@ -220,58 +209,80 @@
         </div>
 
         <div class="contact-wrap">
-            <form class="contact-form" onsubmit="submitForm(event)">
+            <form class="contact-form" id="contact-form" onsubmit="submitForm(event)">
+
+                <!-- ══ WEB3FORMS SETUP ══
+                     1. Go to https://web3forms.com
+                     2. Enter your email → click "Create Access Key"
+                     3. Copy the key and paste it below replacing YOUR_ACCESS_KEY
+                -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+                <input type="hidden" name="subject"    value="Neue Umzugsanfrage – AdlerRhein Logistik">
+                <input type="hidden" name="from_name"  value="AdlerRhein Logistik Website">
+                <input type="hidden" name="botcheck"   value="" style="display:none">
+
                 <div class="form-row">
                     <div class="form-group">
                         <label>Name / Firma *</label>
-                        <input type="text" placeholder="Ihr Name oder Firma">
+                        <input type="text"  name="name"    placeholder="Ihr Name oder Firma" required>
                     </div>
                     <div class="form-group">
                         <label>Vorname *</label>
-                        <input type="text" placeholder="Vorname">
+                        <input type="text"  name="vorname" placeholder="Vorname" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>E-Mail-Adresse *</label>
-                        <input type="email" placeholder="ihre@email.de">
+                        <input type="email" name="email"   placeholder="ihre@email.de" required>
                     </div>
                     <div class="form-group">
                         <label>Telefon *</label>
-                        <input type="tel" placeholder="+49 123 456 7890">
+                        <input type="tel"   name="telefon" placeholder="+49 123 456 7890" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label>Straße / Nr.</label>
-                        <input type="text" placeholder="Straße und Hausnummer">
+                        <input type="text"  name="strasse" placeholder="Straße und Hausnummer">
                     </div>
                     <div class="form-group">
                         <label>PLZ / Ort</label>
-                        <input type="text" placeholder="PLZ und Ort">
+                        <input type="text"  name="plz_ort" placeholder="PLZ und Ort">
                     </div>
                 </div>
                 <div class="form-row checkbox-row">
                     <label class="checkbox-label">
-                        <input type="checkbox"> Privatumzug
+                        <input type="checkbox" name="leistung" value="Privatumzug"> Privatumzug
                     </label>
                     <label class="checkbox-label">
-                        <input type="checkbox"> Firmenumzug
+                        <input type="checkbox" name="leistung" value="Firmenumzug"> Firmenumzug
                     </label>
                     <label class="checkbox-label">
-                        <input type="checkbox"> Neumöbellogistik
+                        <input type="checkbox" name="leistung" value="Neumöbellogistik"> Neumöbellogistik
                     </label>
                     <label class="checkbox-label">
-                        <input type="checkbox"> Sonstiges
+                        <input type="checkbox" name="leistung" value="Sonstiges"> Sonstiges
                     </label>
                 </div>
                 <div class="form-group full">
                     <label>Nachricht</label>
-                    <textarea rows="5" placeholder="Was können wir für Sie tun?"></textarea>
+                    <textarea name="nachricht" rows="5" placeholder="Was können wir für Sie tun?"></textarea>
                 </div>
+
+                <!-- success / error messages -->
+                <div id="form-success" class="form-msg form-msg--ok" style="display:none">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns bald bei Ihnen.
+                </div>
+                <div id="form-error" class="form-msg form-msg--err" style="display:none">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Fehler beim Senden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.
+                </div>
+
                 <div class="form-actions">
                     <p class="form-note">* Pflichtfelder</p>
-                    <button type="submit" class="btn-submit">
+                    <button type="submit" class="btn-submit" id="submit-btn">
                         <i class="fa-solid fa-paper-plane"></i> ANFRAGE SENDEN
                     </button>
                 </div>
@@ -311,8 +322,9 @@
 <footer>
     <div class="footer-inner">
         <div id="footer-left">
+            <img src="logo no bg.png" alt="A&R+ Logistik" class="footer-logo-img">
             <!-- ↓ CHANGE COMPANY INFO -->
-            <p><strong>AdlerRhein Logistik GmbH</strong></p>
+            <p><strong>A&R+ Logistik & Transporte</strong></p>
             <p>Musterstraße 1</p>
             <p>12345 Musterstadt</p>
             <br>
@@ -377,14 +389,10 @@
 
     /* ── CAROUSEL ── */
     const galImages = [
-        'ChatGPT Image Jun 24, 2026, 08_25_13 PM.png',
-        'Ultra_realistic_professional_moving_service_202606242046.jpg',
-        '01 (3).jpeg',
-        '01 (4).jpg',
-        'imgi_22_zwei_bewegliche_dienstleute_in_einem_raum_die_eine_schwere.jpg',
-        'Ultra_realistic_premium_furniture_packing_202606242051.jpg',
-        'Ultra_realistic_premium_furniture_packing_202606242052.jpg',
-        'Ultra_realistic_happy_customer_shaking_202606242105.jpg',
+        'ChatGPT Image Jun 24, 2026, 08_25_13 PM (2).png',
+        'Ultra_realistic_professional_moving_service_202606242046 (2).jpg',
+        'Ultra_realistic_premium_furniture_packing_202606242051 (2).jpg',
+        'Ultra_realistic_happy_customer_shaking_202606242105 (2).jpg',
     ];
     let galIdx = 0;
 
@@ -429,17 +437,60 @@
         if (e.key === 'ArrowRight') galNext();
     });
 
-    /* form submit */
-    function submitForm(e) {
+    /* ── REAL FORM SUBMIT via Web3Forms ── */
+    async function submitForm(e) {
         e.preventDefault();
-        const btn = e.target.querySelector('.btn-submit');
-        btn.innerHTML = '<i class="fa-solid fa-check"></i> GESENDET!';
-        btn.style.background = '#1a7e3c';
-        setTimeout(() => {
-            btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> ANFRAGE SENDEN';
-            btn.style.background = '';
-            e.target.reset();
-        }, 3000);
+        const form    = e.target;
+        const btn     = document.getElementById('submit-btn');
+        const success = document.getElementById('form-success');
+        const error   = document.getElementById('form-error');
+
+        /* hide old messages */
+        success.style.display = 'none';
+        error.style.display   = 'none';
+
+        /* loading state */
+        btn.disabled    = true;
+        btn.innerHTML   = '<i class="fa-solid fa-spinner fa-spin"></i> Wird gesendet…';
+
+        /* collect all form data */
+        const data = Object.fromEntries(new FormData(form));
+
+        try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+                method:  'POST',
+                headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                body:    JSON.stringify(data)
+            });
+            const result = await res.json();
+
+            if (result.success) {
+                /* ✅ success */
+                btn.innerHTML        = '<i class="fa-solid fa-check"></i> GESENDET!';
+                btn.style.background = '#1a7e3c';
+                success.style.display = 'flex';
+                form.reset();
+                setTimeout(() => {
+                    btn.innerHTML        = '<i class="fa-solid fa-paper-plane"></i> ANFRAGE SENDEN';
+                    btn.style.background = '';
+                    btn.disabled         = false;
+                    success.style.display = 'none';
+                }, 6000);
+            } else {
+                throw new Error(result.message || 'Error');
+            }
+        } catch (err) {
+            /* ❌ error */
+            btn.innerHTML        = '<i class="fa-solid fa-xmark"></i> Fehler!';
+            btn.style.background = '#8b1a1a';
+            error.style.display  = 'flex';
+            setTimeout(() => {
+                btn.innerHTML        = '<i class="fa-solid fa-paper-plane"></i> ANFRAGE SENDEN';
+                btn.style.background = '';
+                btn.disabled         = false;
+                error.style.display  = 'none';
+            }, 5000);
+        }
     }
 </script>
 
