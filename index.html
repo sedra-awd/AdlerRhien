@@ -12,7 +12,7 @@
 <!-- ===== HEADER ===== -->
 <header id="site-header">
     <div class="header-logo">
-        <a href="#home"><img src="logo no bg.png" alt="A&R+ Logistik & Transporte" class="header-logo-img"></a>
+        <a href="#home"><img src="logo no bg.png" alt="A&R+ Logistik & Transporte" class="header-logo-img" width="160" height="78" style="height:78px;width:auto;max-height:78px;display:block"></a>
         <div class="header-text">
             <p class="header-tagline">Wir bewegen, was Ihnen wichtig ist – sicher, schnell und professionell</p>
             <p class="header-sub">Umzug · Transport · Lagerung · Einfach zuverlässig</p>
@@ -28,13 +28,14 @@
 
         <!-- UMZÜGE dropdown -->
         <div class="dropdown">
-            <a href="#services" class="nav-link dropdown-toggle">
+            <a href="#" class="nav-link dropdown-toggle" onclick="return false;">
                 UMZÜGE <i class="fa-solid fa-chevron-down fa-xs"></i>
             </a>
             <div class="dropdown-menu">
                 <a href="#privatumzug"><i class="fa-solid fa-house"></i> Privatumzug</a>
                 <a href="#firmenumzug"><i class="fa-solid fa-building"></i> Firmenumzug</a>
                 <a href="#neumoebel"><i class="fa-solid fa-couch"></i> Neumöbellogistik</a>
+                <a href="#altmoebel"><i class="fa-solid fa-trash-can"></i> Altmöbelentsorgung</a>
                 <a href="#contact"><i class="fa-solid fa-file-signature"></i> Umzugsanfrage</a>
             </div>
         </div>
@@ -65,57 +66,53 @@
                 <a href="#firmenumzug"><i class="fa-solid fa-building"></i> FIRMENUMZUG</a>
                 <a href="#neumoebel"><i class="fa-solid fa-couch"></i> NEUMÖBELLOGISTIK</a>
                 <a href="#contact"><i class="fa-solid fa-file-signature"></i> UMZUGSANFRAGE</a>
-                <a href="#contact" class="btn-quote">
-                    <i class="fa-solid fa-file-invoice"></i> Jetzt Anfrage stellen
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
             </div>
         </div>
 
-        <!-- join team banner -->
+        <!-- news ticker banner -->
         <div id="join-team">
-            <i class="fa-solid fa-users join-icon"></i>
-            <div class="join-divider"></div>
-            <div class="join-content">
-                <h3>KOMM' INS TEAM!</h3>
-                <a href="#contact">Berufskraftfahrer / Umzugsmitarbeiter (m/w/d)</a>
-                <p>Werde Teil unseres starken Teams.</p>
+            <div class="ticker-track">
+                <!-- copy 1 -->
+                <div class="ticker-set">
+                    <div class="ticker-item">
+                        <img src="logo no bg.png" class="ticker-logo" alt="">
+                        <span>Umzug · Transport · Lagerung · Einfach zuverlässig</span>
+                    </div>
+                    <div class="ticker-item">
+                        <img src="logo no bg.png" class="ticker-logo" alt="">
+                        <span>Umzug · Transport · Lagerung · Einfach zuverlässig</span>
+                    </div>
+                    <div class="ticker-item">
+                        <img src="logo no bg.png" class="ticker-logo" alt="">
+                        <span>Umzug · Transport · Lagerung · Einfach zuverlässig</span>
+                    </div>
+                    <div class="ticker-item">
+                        <img src="logo no bg.png" class="ticker-logo" alt="">
+                        <span>Umzug · Transport · Lagerung · Einfach zuverlässig</span>
+                    </div>
+                </div>
+                <!-- copy 2 — for seamless loop -->
+                <div class="ticker-set">
+                    <div class="ticker-item">
+                        <img src="logo no bg.png" class="ticker-logo" alt="">
+                        <span>Umzug · Transport · Lagerung · Einfach zuverlässig</span>
+                    </div>
+                    <div class="ticker-item">
+                        <img src="logo no bg.png" class="ticker-logo" alt="">
+                        <span>Umzug · Transport · Lagerung · Einfach zuverlässig</span>
+                    </div>
+                    <div class="ticker-item">
+                        <img src="logo no bg.png" class="ticker-logo" alt="">
+                        <span>Umzug · Transport · Lagerung · Einfach zuverlässig</span>
+                    </div>
+                    <div class="ticker-item">
+                        <img src="logo no bg.png" class="ticker-logo" alt="">
+                        <span>Umzug · Transport · Lagerung · Einfach zuverlässig</span>
+                    </div>
+                </div>
             </div>
-            <a href="#contact" class="btn-apply">JETZT BEWERBEN</a>
         </div>
 
-    </section>
-
-    <!-- ══════════ GALERIE ══════════ -->
-    <section id="galerie">
-        <div class="section-title">
-            <h2>GALERIE</h2>
-            <div class="title-line"></div>
-        </div>
-
-        <div class="carousel-wrap">
-            <!-- prev slide -->
-            <div class="car-slide car-prev" onclick="galPrev()">
-                <img id="car-img-prev" src="" alt="">
-                <div class="car-dim"></div>
-            </div>
-            <!-- active / center slide -->
-            <div class="car-slide car-active">
-                <img id="car-img-active" src="" alt="">
-            </div>
-            <!-- next slide -->
-            <div class="car-slide car-next" onclick="galNext()">
-                <img id="car-img-next" src="" alt="">
-                <div class="car-dim"></div>
-            </div>
-        </div>
-
-        <!-- arrow buttons -->
-        <div class="car-arrows">
-            <button class="car-btn" onclick="galPrev()"><i class="fa-solid fa-chevron-left"></i></button>
-            <span class="car-counter" id="car-counter">1 / 8</span>
-            <button class="car-btn" onclick="galNext()"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
     </section>
 
     <!-- ══════════ SERVICES ══════════ -->
@@ -164,6 +161,52 @@
             </div>
         </div>
 
+        <!-- 4. Altmöbelentsorgung -->
+        <div id="altmoebel" class="service-block reverse">
+            <div class="img-wrap">
+                <img src="photo_2026-07-02_01-08-09.jpg" alt="Altmöbelentsorgung">
+            </div>
+            <div class="service-info">
+                <i class="fa-solid fa-trash-can service-icon"></i>
+                <h3>Altmöbelentsorgung</h3>
+                <p>Wir übernehmen die fachgerechte Entsorgung Ihrer alten Möbel – schnell, sauber und ohne Aufwand für Sie. Egal ob einzelne Möbelstücke, komplette Wohnungsauflösungen oder sperrige Gegenstände – unser Team kümmert sich um Abholung, Transport und ordnungsgemäße Entsorgung.</p>
+                <p>Unser Service eignet sich für Privatpersonen sowie Unternehmen und sorgt für eine einfache und stressfreie Lösung bei der Entfernung alter Möbel.</p>
+                <a href="#contact" class="btn-service">Jetzt anfragen</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ══════════ GALERIE ══════════ -->
+    <section id="galerie">
+        <div class="section-title">
+            <h2>GALERIE</h2>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="carousel-wrap">
+            <!-- prev slide -->
+            <div class="car-slide car-prev" onclick="galPrev()">
+                <img id="car-img-prev" src="" alt="">
+                <div class="car-dim"></div>
+            </div>
+            <!-- active / center slide -->
+            <div class="car-slide car-active">
+                <img id="car-img-active" src="" alt="">
+            </div>
+            <!-- next slide -->
+            <div class="car-slide car-next" onclick="galNext()">
+                <img id="car-img-next" src="" alt="">
+                <div class="car-dim"></div>
+            </div>
+        </div>
+
+        <!-- arrow buttons -->
+        <div class="car-arrows">
+            <button class="car-btn" onclick="galPrev()"><i class="fa-solid fa-chevron-left"></i></button>
+            <span class="car-counter" id="car-counter">1 / 5</span>
+            <button class="car-btn" onclick="galNext()"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
     </section>
 
     <!-- ══════════ ÜBER UNS ══════════ -->
@@ -325,11 +368,11 @@
             <img src="logo no bg.png" alt="A&R+ Logistik" class="footer-logo-img">
             <!-- ↓ CHANGE COMPANY INFO -->
             <p><strong>A&R+ Logistik & Transporte</strong></p>
-            <p>Musterstraße 1</p>
-            <p>12345 Musterstadt</p>
+            <p>Scheffelstr. 3</p>
+            <p>74909 Meckesheim</p>
             <br>
-            <p>Tel.: 123-456-7890</p>
-            <p>Fax: 123-456-7891</p>
+            <p>Mobil: <a href="tel:+4917620281199">+49 176 20281199</a></p>
+            <p>Tel.: <a href="tel:062264597496">062264597496</a></p>
             <a href="mailto:info@adlerrhein.de">info@adlerrhein.de</a>
         </div>
         <div id="footer-links">
@@ -338,11 +381,12 @@
             <a href="#privatumzug">Privatumzug</a>
             <a href="#firmenumzug">Firmenumzug</a>
             <a href="#neumoebel">Neumöbellogistik</a>
+            <a href="#altmoebel">Altmöbelentsorgung</a>
             <a href="#about">Über uns</a>
             <a href="#contact">Kontakt</a>
         </div>
         <div id="footer-legal">
-            <a href="#">Impressum</a>
+            <a href="impressum.html">Impressum</a>
             <a href="#">Datenschutz</a>
         </div>
     </div>
@@ -393,6 +437,7 @@
         'Ultra_realistic_professional_moving_service_202606242046 (2).jpg',
         'Ultra_realistic_premium_furniture_packing_202606242051 (2).jpg',
         'Ultra_realistic_happy_customer_shaking_202606242105 (2).jpg',
+        'photo_2026-07-02_01-08-09.jpg',
     ];
     let galIdx = 0;
 

@@ -36,11 +36,14 @@ a    { text-decoration: none; }
     animation: fadeInDown .7s ease both;
 }
 .header-logo-img {
-    height: 78px;
-    width: auto;
+    height: 78px !important;
+    width: auto !important;
+    max-height: 78px !important;
+    max-width: 200px;
     object-fit: contain;
     transition: transform .3s ease;
     flex-shrink: 0;
+    display: block;
 }
 .header-logo-img:hover { transform: scale(1.04); }
 .header-text {
@@ -123,7 +126,7 @@ a    { text-decoration: none; }
 
 .dropdown-menu {
     position: absolute;
-    top: calc(100% + 4px);
+    top: 100%;
     left: 0;
     background: #1a1a1a;
     min-width: 230px;
@@ -132,9 +135,18 @@ a    { text-decoration: none; }
     z-index: 200;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-8px);
-    transition: opacity .25s ease, visibility .25s ease, transform .25s ease;
+    transform: translateY(-6px);
+    transition: opacity .22s ease, visibility .22s ease, transform .22s ease;
     pointer-events: none;
+}
+/* bridge the gap so mouse can move from toggle to menu without losing hover */
+.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 10px;
 }
 .dropdown:hover .dropdown-menu {
     opacity: 1;
@@ -210,7 +222,7 @@ a    { text-decoration: none; }
 ══════════════════════════════════════ */
 #hero {
     display: flex;
-    background: #cc0000;
+    background: #8b0000;
     min-height: 480px;
     overflow: hidden;
 }
@@ -317,39 +329,56 @@ a    { text-decoration: none; }
 }
 
 /* ══════════════════════════════════════
-   JOIN TEAM BANNER
+   TICKER BANNER
 ══════════════════════════════════════ */
+@keyframes ticker {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
 #join-team {
+    background: #8b0000;
+    overflow: hidden;
+    padding: 0;
+    height: 64px;
     display: flex;
     align-items: center;
-    gap: 24px;
-    padding: 26px 60px;
-    background: #8b1a1a;
-    transition: background .3s;
+    border-top: 2px solid rgba(255,255,255,.15);
+    border-bottom: 2px solid rgba(255,255,255,.15);
 }
-#join-team:hover { background: #7a1515; }
-.join-icon { font-size: 50px; color: #fff; flex-shrink: 0; transition: transform .3s; }
-#join-team:hover .join-icon { transform: scale(1.1); }
-.join-divider { width: 2px; height: 66px; background: rgba(255,255,255,.3); flex-shrink: 0; }
-.join-content { flex: 1; display: flex; flex-direction: column; gap: 4px; }
-.join-content h3 { font-size: 21px; font-weight: 900; color: #fff; letter-spacing: 1px; }
-.join-content a { color: #ffd0d0; text-decoration: underline; font-weight: 700; font-size: 14px; transition: color .2s; }
-.join-content a:hover { color: #fff; }
-.join-content p { color: rgba(255,255,255,.7); font-size: 13px; }
-.btn-apply {
-    background: #fff;
-    color: #8b1a1a !important;
-    padding: 13px 30px;
-    font-size: 14px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    border-radius: 5px;
+.ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker 28s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+.ticker-set {
+    display: flex;
+    align-items: center;
     flex-shrink: 0;
-    white-space: nowrap;
-    box-shadow: 0 4px 12px rgba(0,0,0,.2);
-    transition: background .25s, color .25s, transform .2s;
 }
-.btn-apply:hover { background: #1a237e; color: #fff !important; transform: translateY(-2px); }
+.ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 50px;
+    white-space: nowrap;
+    border-right: 1px solid rgba(255,255,255,.2);
+}
+.ticker-logo {
+    height: 36px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: .85;
+    flex-shrink: 0;
+}
+.ticker-item span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
 
 /* ══════════════════════════════════════
    SECTION TITLE (shared)
@@ -913,11 +942,11 @@ footer { background: #2b2b2b; color: #fff; }
     .welcome-label { font-size: 16px; }
     .btn-quote { width: 100%; justify-content: center; }
 
-    /* — join team — */
-    #join-team { flex-direction: column; padding: 26px 20px; text-align: center; gap: 16px; }
-    .join-divider { width: 50px; height: 2px; }
-    .join-icon { font-size: 40px; }
-    .btn-apply { width: 100%; text-align: center; }
+    /* — ticker — */
+    #join-team { height: 54px; }
+    .ticker-item { padding: 0 30px; gap: 12px; }
+    .ticker-logo { height: 28px; }
+    .ticker-item span { font-size: 12px; letter-spacing: 1px; }
 
     /* — gallery carousel — */
     .carousel-wrap { height: 240px; }
@@ -998,10 +1027,9 @@ footer { background: #2b2b2b; color: #fff; }
     .section-title h2 { font-size: 24px; letter-spacing: 2px; }
     .section-title { padding: 40px 16px 28px; }
 
-    /* join team */
-    #join-team { padding: 22px 18px; }
-    .join-content h3 { font-size: 18px; }
-    .join-content a  { font-size: 13px; }
+    /* ticker */
+    #join-team { height: 50px; }
+    .ticker-item span { font-size: 11px; }
 
     /* contact */
     .contact-wrap { padding: 0 16px; }
