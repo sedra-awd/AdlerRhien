@@ -30,9 +30,9 @@ a    { text-decoration: none; }
 .header-logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
-    padding: 12px 20px 0;
+    padding: 12px 28px 0;
     animation: fadeInDown .7s ease both;
 }
 .header-logo-img {
@@ -58,7 +58,8 @@ a    { text-decoration: none; }
     color: #333;
     font-size: 13px;
     font-weight: 600;
-    letter-spacing: .2px;
+    letter-spacing: .6px;
+    word-spacing: 2px;
 }
 .header-sub {
     color: #c8a000;
@@ -70,10 +71,14 @@ a    { text-decoration: none; }
 
 /* footer logo */
 .footer-logo-img {
-    height: 60px;
+    height: 80px;
     width: auto;
+    max-width: 160px;
     object-fit: contain;
+    object-position: left center;
     margin-bottom: 12px;
+    margin-left: 0;
+    display: block;
     filter: brightness(0) invert(1);
     opacity: .85;
 }
@@ -225,7 +230,22 @@ a    { text-decoration: none; }
     background: #8b0000;
     min-height: 480px;
     overflow: hidden;
+    position: relative;
 }
+.hero-watermark {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    max-width: 340px;
+    opacity: 0.06;
+    filter: brightness(0) invert(1);
+    pointer-events: none;
+    z-index: 0;
+}
+#hero-text    { position: relative; z-index: 2; }
+#hero-image-wrap { position: relative; z-index: 2; }
 #hero-image-wrap {
     width: 55%;
     flex-shrink: 0;
@@ -343,8 +363,6 @@ a    { text-decoration: none; }
     height: 64px;
     display: flex;
     align-items: center;
-    border-top: 2px solid rgba(255,255,255,.15);
-    border-bottom: 2px solid rgba(255,255,255,.15);
 }
 .ticker-track {
     display: flex;
